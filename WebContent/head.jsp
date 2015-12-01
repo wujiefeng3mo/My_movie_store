@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</tr>
 	<tr>
 		<td width="23%"><img src="images/1169762.png" width="161" height="131" /></td>
-		<td width="57%"><div align="center"><img src="imgs/logo1.gif" width="321" height="142" /></div></td>
+		<td width="57%"><div align="center"><img src="images/logo1.gif" width="321" height="130" /></div></td>
 		<td width="20%"><p>
 				<img src="images/1181629.png" width="56" height="46" /><a href="ShoppingCl2">[My account]
 			</p>
