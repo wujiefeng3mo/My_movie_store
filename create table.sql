@@ -10,7 +10,6 @@ phone varchar(20) not null, --------phone number
 address varchar(30) not null,
 postcode char(6) not null, ----- postcode
 grade int   default 1 -----------user level
-
 );
 
 

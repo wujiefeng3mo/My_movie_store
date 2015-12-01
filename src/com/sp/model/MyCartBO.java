@@ -6,8 +6,16 @@ import java.sql.ResultSet;
 import java.util.*;
 
 public class MyCartBO {
+	
+	public HashMap<String, String> getHm() {
+		return hm;
+	}
 
-	HashMap<String, String> hm = new HashMap<String, String>();
+	public void setHm(HashMap<String, String> hm) {
+		this.hm = hm;
+	}
+
+	private HashMap<String, String> hm = new HashMap<String, String>();
 
 	private ResultSet rs = null;
 	private Connection ct = null;
