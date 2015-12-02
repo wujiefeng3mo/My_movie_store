@@ -27,6 +27,13 @@ public class Register extends HttpServlet {
 		String phone = request.getParameter("phone");
 		String address = request.getParameter("address");
 		String postcode = request.getParameter("postcode");
+		System.out.println(u+p);
+		if(u == null || p == null || name == null || email == null || phone == null || address == null
+				|| postcode == null) {
+			request.getRequestDispatcher("account.jsp").forward(request,
+					response);
+			return;
+		}
 		UserBeanBO ubb = new UserBeanBO();
 		UserBean tar = new UserBean(u, name, p, email, phone, address, postcode);
 		UserBeanBO temp = new UserBeanBO();
