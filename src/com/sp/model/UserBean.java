@@ -1,7 +1,9 @@
-/*
- * user bean to hold the user info
- */
+
 package com.sp.model;
+/**
+ * @author Jiefeng Wu
+ * This is model class,which represents the users table
+ */
 
 public class UserBean {
 	

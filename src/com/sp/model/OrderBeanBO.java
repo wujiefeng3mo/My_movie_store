@@ -1,8 +1,10 @@
-/*
- * this is the model,to process orders,orderDetail
- */
+
 package com.sp.model;
 
+/**
+ * @author Jiefeng Wu
+ * This is the model class,to process orders,orderDetail
+ */
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,11 +34,11 @@ public class OrderBeanBO {
 			int a=ps.executeUpdate();
 			
 			if(a==1){
+		
+				//get the order number that added to the orders table
 			
-				
 				ps=ct.prepareStatement("select max(ordersId) from orders");
-				
-				
+							
 				// get all the record
 				rs=ps.executeQuery();
 				
@@ -50,6 +52,8 @@ public class OrderBeanBO {
 				ArrayList al=mbo.showMyCart();
 	
 				Statement sm=ct.createStatement();
+				
+				//add into the orders table
 				for(int i=0;i<al.size();i++){
 					
 					GoodsBean gb=(GoodsBean)al.get(i);
@@ -59,6 +63,7 @@ public class OrderBeanBO {
 				
 				sm.executeBatch();
 				
+				//search different tables
 				String sql="select ordersId ,truename,address,postcode,phone,totalPrice,username,email from users,orders"+ 
 				" where ordersId=? and users.userid = (select orders.userid from orders where ordersId=?)";
 				

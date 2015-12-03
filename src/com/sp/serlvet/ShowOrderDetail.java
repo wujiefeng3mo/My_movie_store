@@ -1,4 +1,9 @@
 package com.sp.serlvet;
+
+/**
+ * @author Jiefeng Wu
+ * This is a controller
+ */
 import com.sp.model.*;
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,5 +1,9 @@
 package com.sp.model;
 
+/**
+ * @author Jiefeng Wu
+ * This is a model class
+ */
 public class OrderDetailBean {
 
 	private long ordesIid;
