@@ -1,7 +1,11 @@
-/*
- * all the detail information of the order.
- */
 package com.sp.model;
+
+/**
+ * 
+ * @author Jiefeng Wu
+ * This is a model class and all the detail information of the order.
+ *
+ */
 public class OrderInfoBean {
 
 	private int userid;

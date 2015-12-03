@@ -3,7 +3,7 @@ package com.sp.serlvet;
 /**
  * @author Yiwei Lu
  * This is a controller, used to check whether the user has logined or not
- *  */
+ */
 
 import com.sp.model.*;
 import java.io.IOException;
@@ -27,8 +27,8 @@ public class ShoppingCl2 extends HttpServlet {
 		
 		
 		/*
-		 * check if user session contain userinfo to determin if the user
-		 * has signned in.
+		 * check if user session contain user information to determine if the user
+		 * has Logined in before.
 		 */
 		UserBean ub=(UserBean)request.getSession().getAttribute("userInfo");
 		

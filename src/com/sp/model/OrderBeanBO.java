@@ -2,7 +2,7 @@
 package com.sp.model;
 
 /**
- * @author Jiefeng Wu
+ * @author Yiwei Lu
  * This is the model class,to process orders,orderDetail
  */
 import java.sql.Connection;

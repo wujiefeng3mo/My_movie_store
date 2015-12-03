@@ -3,9 +3,11 @@ package com.sp.model;
 
 /**
  * 
- * @author Jiefeng Wu
+ * @author Yiwei Lu
  *	This is a model class to deal with the business logic with the goods table.
  */
+
+
 import java.sql.*;
 import java.util.ArrayList;
 public class GoodsBeanBO {
@@ -101,7 +103,7 @@ public class GoodsBeanBO {
 	/**
 	 * Paging to show the information of goods
 	 * @prameter int pageSize: the amount of the goods in each page
-	 * @author Yiwei LU
+	 * @author Yiwei Lu
 	 * @prameter int pageNow: the page showing nor
 	 * @return ArrayList [the set of the goods to show]
 	 */
