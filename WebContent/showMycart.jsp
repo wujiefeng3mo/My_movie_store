@@ -54,10 +54,10 @@ MyCartBO mbo=(MyCartBO)session.getAttribute("mycart");
 									src="images/cartnavi-1.gif" width="599" height="49" /></td>
 							</tr>
 							<tr align="center">
-								<td width="21%">id</td>
-								<td width="25%">name</td>
-								<td width="27%">price</td>
-								<td colspan="3">quant</td>
+								<td width="21%">Id</td>
+								<td width="25%">Name</td>
+								<td width="27%">Price</td>
+								<td colspan="3">Quantity</td>
 							</tr>
 							<%
       

@@ -1,8 +1,11 @@
 package com.sp.model;
 
 
-/*
- * This is the model, and according to the orders
+/**
+ * 
+ * @author Jiefeng Wu
+ * This is a model class,which is corresponding to the orders table
+ *
  */
 public class OrderBean {
 	

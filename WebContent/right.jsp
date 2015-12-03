@@ -24,7 +24,7 @@
 	<tbody>
 		<tr>
 			<td colspan="3" align="left"><img src="images/popular.gif"
-				width="436" height="63" /></td>
+				width="836" height="63" /></td>
 		</tr>
 		<%
 			int k = 0;
@@ -60,7 +60,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td height="22" valign="top">price: <%=gb.getGoodsPrice()%> $
+						<td height="22" valign="top">Price: $<%=gb.getGoodsPrice()%> 
 						</td>
 					</tr>
 					<tr>

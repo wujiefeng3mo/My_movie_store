@@ -1,9 +1,11 @@
 
 package com.sp.model;
 
-/*
- * This is a model class handling products table
+/**
+ * @author Jiefeng Wu
+ * This is a model class, which is corresponding to the goods table
  */
+
 public class GoodsBean {
 
 	

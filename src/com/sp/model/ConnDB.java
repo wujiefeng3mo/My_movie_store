@@ -1,13 +1,17 @@
 package com.sp.model;
 import java.sql.*;
-
+/**
+ * 
+ * @author Jiefeng Wu
+ *	This is a model and used to link the database
+ */
 public class ConnDB {
 
 	private Connection ct=null;
 	
 	public Connection getConn(){
 		String usr = "postgres";
-		String pwd = "123";
+		String pwd = "1234";
 		String url = "jdbc:postgresql://localhost:5432/mystore";
 		try {
 			

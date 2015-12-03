@@ -1,7 +1,13 @@
 
 package com.sp.model;
 
- 
+/**
+ * 
+ * @author Yiwei Lu
+ *	This is a model class to deal with the business logic with the goods table.
+ */
+
+
 import java.sql.*;
 import java.util.ArrayList;
 public class GoodsBeanBO {
@@ -92,6 +98,15 @@ public class GoodsBeanBO {
 		
 		return al;
 	}
+	
+	//paging
+	/**
+	 * Paging to show the information of goods
+	 * @prameter int pageSize: the amount of the goods in each page
+	 * @author Yiwei Lu
+	 * @prameter int pageNow: the page showing nor
+	 * @return ArrayList [the set of the goods to show]
+	 */
 	public GoodsBean getGoodsBean(String id){
 		
 		
@@ -130,6 +145,8 @@ public class GoodsBeanBO {
 		return gb;
 		
 	}	
+	
+	//close the resource to release the space
 	public void close(){
 		
 		try {
