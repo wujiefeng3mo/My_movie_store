@@ -46,26 +46,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												width="149" height="63" /></td>
 										</tr>
 										<tr>
-											<td width="39%" align="right">username:</td>
+											<td width="39%" align="right">Username:</td>
 											<td width="61%" align="left"><input name="username"
 												type="text" size="15" /></td>
 										</tr>
 										<tr>
-											<td align="right">password:</td>
+											<td align="right">Password:</td>
 											<td align="left"><input name="password" type="text"
 												size="15" /></td>
 										</tr>
 										<tr>
-											<td align="right"><button type="submit" class="btn btn-default">sign in</button></td>
-											<td align="left"><a href="LoginCl?type=signup">sign up</td>
+											<td align="right"><button type="submit" class="btn btn-default">Sign in</button></td>
+											<td align="left"><a href="LoginCl?type=signup">Sign up</td>
 										</tr>
 									</table>
 								</form>
 							</td>
 						</tr>
 						<tr>
-							<td align="right"><img src="images/cartnext.gif" width="87"
-								height="19" /></td>
+							<td align="right"><img src="images/cartnext.gif" width="120"
+								height="25" /></td>
 						</tr>
 					</table></td>
 			</tr>

@@ -1,5 +1,10 @@
 package com.sp.model;
 
+
+/**
+ * @author Jiefeng Wu
+ * This is a model class
+ */
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,16 +33,22 @@ public class MyCartBO {
 		return this.allPrice;
 	}
 
+	/**
+	 * According to id, get the amount of the goods
+	 * @param  goodsId
+	 * @return goodsNum
+	 */
 	public String getGoodsNumById(String goodsId) {
 
 		return (String) hm.get(goodsId);
 	}
 
+	//add goods
 	public void addGoods(String goodsId, String goodsNum) {
 
 		hm.put(goodsId, goodsNum);
 	}
-
+	//delete goods
 	public void delGoods(String goodsId) {
 
 		hm.remove(goodsId);
@@ -47,7 +58,7 @@ public class MyCartBO {
 
 		hm.clear();
 	}
-
+	//modify the cart
 	public void upGoods(String goodsId, String newNum) {
 
 		hm.put(goodsId, newNum);
@@ -68,6 +79,7 @@ public class MyCartBO {
 				while (it.hasNext()) {
 
 					String goodsId = (String) it.next();
+					//whether the id is the last one or not
 					if (it.hasNext()) {
 						sub += goodsId + ",";
 					} else {

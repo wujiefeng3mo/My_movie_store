@@ -48,7 +48,7 @@ create table orderDetail(
 --------insert a  user
 insert into users values (0,'admin','admin','admin','wujiefeng3mo@gmail.com','111-111-1111','NJ','07307');
 ------insert products
-insert into products values (1,'The Godfather','excellent movie','49.00','5','fox','godfather.jpg','crime');
+insert into products values (1,'The Godfather','excellent movie','40.00','5','fox','godfather.jpg','crime');
 insert into products values (2,'The Godfather','excellent movie','49.00','5','fox','godfather.jpg','crime');
 insert into products values (3,'The Godfather','excellent movie','49.00','5','fox','godfather.jpg','crime');
 insert into products values (4,'The Godfather','excellent movie','49.00','5','fox','godfather.jpg','crime');
