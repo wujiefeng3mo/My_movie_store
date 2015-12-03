@@ -23,7 +23,7 @@
 	class="table table-hover">
 	<tbody>
 		<tr>
-			<td colspan="3" align="left"><img src="images/booksTop.gif"
+			<td colspan="3" align="left"><img src="images/popular.gif"
 				width="436" height="63" /></td>
 		</tr>
 		<%
