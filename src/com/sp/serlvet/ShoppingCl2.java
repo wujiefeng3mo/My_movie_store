@@ -21,31 +21,40 @@ public class ShoppingCl2 extends HttpServlet {
 
 		response.setContentType("text/html");
 
-		//deal with the messy code
+		// deal with the messy code
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		
-		
-		/*
-		 * check if user session contain user information to determine if the user
-		 * has Logined in before.
-		 */
-		UserBean ub=(UserBean)request.getSession().getAttribute("userInfo");
-		
-		if(ub==null)
-		{
-			 // the user has not logined before,turn into "shopping2.jsp"
-			request.getRequestDispatcher("shopping2.jsp").forward(request, response);
-			
-		}
-		else
-		{
-			//the user has logined and turn into "shopping3.jsp" 
-			request.getRequestDispatcher("shopping3.jsp").forward(request, response);
-		}
-		
-	}
+		String type = request.getParameter("type");
 
+		/*
+		 * check if user session contain user information to determine if the
+		 * user has Logined in before.
+		 */
+		UserBean ub = (UserBean) request.getSession().getAttribute("userInfo");
+		if (type != null) {
+			if (ub == null) {
+				// the user has not logined before,turn into "shopping2.jsp"
+				request.getRequestDispatcher("shopping2.jsp").forward(request,
+						response);
+
+			} else {
+				// the user has logined and turn into "shopping3.jsp"
+				request.getRequestDispatcher("shopping3.jsp").forward(request,
+						response);
+			}
+		}
+		else {
+			if(type.equals("accountinfo")&& ub != null) {
+				request.getRequestDispatcher("userInfo.jsp").forward(request,
+						response);
+			}
+			else {
+				request.getRequestDispatcher("shopping2.jsp").forward(request,
+						response);
+			}
+		}
+
+	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

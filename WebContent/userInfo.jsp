@@ -1,6 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" import="com.sp.model.*" text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%
+UserBean ub=(UserBean)session.getAttribute("userInfo");
+%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -34,27 +42,31 @@
 										</tr>
 										<tr bordercolor="#000000" bgcolor="#FFFFFF">
 										  <td align="right">Username:</td>
-									      <td width="61%" align="left">|</td>
+									      <td width="61%" align="left"><%=ub.getUsername()%>></td>
 									  </tr>
 										<tr bordercolor="#000000" bgcolor="#FFFFFF">
-										  <td align="right">True Name: </td>
+										  <td align="right">True Name: <%=ub.getTruename() %></td>
 									      <td width="61%" align="left">|</td>
 									  </tr>
 										<tr bordercolor="#000000" bgcolor="#FFFFFF">
 										  <td align="right">Adress:</td>
-									      <td width="61%" align="left">|</td>
+									      <td width="61%" align="left"><%=ub.getAddress() %></td>
 									  </tr>
 										<tr bordercolor="#000000" bgcolor="#FFFFFF">
 										  <td align="right">Telephone:</td>
-									      <td width="61%" align="left">|</td>
+									      <td width="61%" align="left"><%=ub.getPhone() %></td>
 									  </tr>
 										<tr bordercolor="#000000" bgcolor="#FFFFFF">
 											<td width="39%" align="right">Email:</td>
-											<td width="61%" align="left">|</td>
+											<td width="61%" align="left"><%=ub.getEmail()%></td>
 										</tr>
 										<tr bordercolor="#000000" bgcolor="#FFFFFF">
 										  <td align="right">Postcode:</td>
-									      <td width="61%" align="left">|</td>
+									      <td width="61%" align="left"><%=ub.getPostcode()%></td>
+									  </tr>
+									  <tr bordercolor="#000000" bgcolor="#FFFFFF">
+										  <td align="right">grade:</td>
+									      <td width="61%" align="left"><%=ub.getGrade() %></td>
 									  </tr>
 										<tr>
 										  <td colspan="2" align="center" bgcolor="#FFCC99">&nbsp;</td>

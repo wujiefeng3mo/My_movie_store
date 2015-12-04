@@ -39,6 +39,7 @@ public class OrderClServlet extends HttpServlet
 		
 			// add successfully and prepare to show the detailed information of data to the "shopping4.jsp"
 			request.setAttribute("detailbean", oib);
+			request.removeAttribute("mycart");
 			request.getRequestDispatcher("shopping4.jsp").forward(request, response);
 		}
 		else

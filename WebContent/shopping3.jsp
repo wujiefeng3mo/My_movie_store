@@ -116,14 +116,13 @@ MyCartBO mcb=(MyCartBO)session.getAttribute("mycart");
 										<td colspan="4">total price$ <%=mcb.getAllPrice() %></td>
 									</tr>
 									<tr>
-										<td colspan="4" align="center"><input type="submit"
-											name="Submit3" value="return to shopping cart" /></td>
+										<td colspan="4" align="center"><a href="index.jsp"
+											>continue shopping</td>
 									</tr>
 								</table></td>
 						</tr>
 						<tr>
-							<td align="right"><img src="images/cartpre.gif" width="87"
-								height="19" /><a href="OrderClServlet"><img border="0"
+							<td align="right"><a href="OrderClServlet"><img border="0"
 									src="images/cartnext.gif" width="87" height="19" /></a></td>
 						</tr>
 					</table></td>

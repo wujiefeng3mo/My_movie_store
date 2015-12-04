@@ -44,9 +44,7 @@ public class UserBeanBO {
 		return ub;
 	}
 	// to check whether user is legal
-
 	public boolean checkUser(String u,String p){
-		
 		
 		boolean b=false;
 		try {

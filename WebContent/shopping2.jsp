@@ -57,7 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</tr>
 										<tr>
 											<td align="right"><button type="submit" class="btn btn-default">Sign in</button></td>
-											<td align="left"><a href="LoginCl?type=signup">Sign up</td>
+											<td align="left"><a href="account.jsp">Sign up</td>
 										</tr>
 									</table>
 								</form>
