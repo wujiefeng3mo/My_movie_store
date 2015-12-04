@@ -18,7 +18,7 @@
 				<img src="images/logo1.gif" width="350" height="130" />
 			</div></td>
 		<td width="20%"><img src="images/ic_person_pin_black_24dp.png"
-			width="50" height="40" /><a href="ShoppingCl2?type=accountinfo">[My
+			width="50" height="40" /><a href="ShoppingCl2">[My
 				account]
 				</p>
 				<p>

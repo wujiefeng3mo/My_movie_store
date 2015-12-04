@@ -2,7 +2,7 @@ package com.sp.model;
 
 /**
  * @author Jiefeng Wu
- * This is a model class
+ * This is a model class to stands for  the detail order
  */
 public class OrderDetailBean {
 

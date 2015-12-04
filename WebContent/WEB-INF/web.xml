@@ -41,9 +41,6 @@
 	</servlet>
 
 
-
-
-
 	<servlet-mapping>
 		<servlet-name>ShowGoodsClServlet</servlet-name>
 		<url-pattern>/ShowGoodsClServlet</url-pattern>
@@ -68,6 +65,8 @@
 		<servlet-name>Register</servlet-name>
 		<url-pattern>/Register</url-pattern>
 	</servlet-mapping>
+
+	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>

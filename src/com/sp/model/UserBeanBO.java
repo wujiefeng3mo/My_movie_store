@@ -1,3 +1,10 @@
+
+/**
+ * 
+ * @author Jiefeng Wu
+ * This is a model class to process the user information. add users or get users information form database.
+ *
+ */
 package com.sp.model;
 
 import java.sql.Connection;

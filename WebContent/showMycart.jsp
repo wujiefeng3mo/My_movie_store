@@ -61,9 +61,9 @@ MyCartBO mbo=(MyCartBO)session.getAttribute("mycart");
 							</tr>
 							<%
       
-      	for(int i=0;i<al.size();i++){
-      	GoodsBean gb=(GoodsBean)al.get(i);
-      	%>
+      						for(int i=0;i<al.size();i++){
+      						GoodsBean gb=(GoodsBean)al.get(i);
+      						%>
 							<tr align="center">
 								<td><%=gb.getGoodsId() %></td>
 								<td><%=gb.getGoodsName() %></td>

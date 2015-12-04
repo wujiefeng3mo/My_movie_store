@@ -3,7 +3,7 @@ package com.sp.serlvet;
 
 /**
  * @author Yiwei Lu
- * 
+ * this is the controller to process the order
  */
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,7 +39,7 @@ public class OrderClServlet extends HttpServlet
 		
 			// add successfully and prepare to show the detailed information of data to the "shopping4.jsp"
 			request.setAttribute("detailbean", oib);
-			request.removeAttribute("mycart");
+			request.getSession().removeAttribute("mycart");
 			request.getRequestDispatcher("shopping4.jsp").forward(request, response);
 		}
 		else

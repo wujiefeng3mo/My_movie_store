@@ -17,7 +17,6 @@
 	}
 
 	ArrayList al = gbb.getGoodsByPage(6, n_pageNow);
-	System.out.println("al.size=" + al.size());
 %>
 <table width="100%"  cellpadding="0" cellspacing="0"
 	class="table table-hover">

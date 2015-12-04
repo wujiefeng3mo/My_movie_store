@@ -3,7 +3,8 @@ package com.sp.model;
 
 /**
  * @author Jiefeng Wu
- * This is a model class
+ * This is a model class stands for shopping cart
+ * I use hashmap to store the products id and number.
  */
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,7 +44,7 @@ public class MyCartBO {
 		return (String) hm.get(goodsId);
 	}
 
-	//add goods
+	//add goods into shopping cart
 	public void addGoods(String goodsId, String goodsNum) {
 
 		hm.put(goodsId, goodsNum);

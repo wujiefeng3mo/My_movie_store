@@ -2,6 +2,7 @@ package com.sp.serlvet;
 
 /**
  * @author Yiwei Lu
+ * This is the controller to handle shopping processing.
  */
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -78,27 +79,13 @@ public class ShoppingClServlet extends HttpServlet
 		}
 		else if (type.equals("delAll")) 
 		{
-
 			mbo.clear();
 		} else if (type.equals("updateGoods")) {
-			//do nothing
-		} else if (type.equals("updateGoods")) {
-			// the user want to change the amount
-			
-			//get the goods id and amount in the servlet
-			
-			//get goods Id
-			String goodsId[] = request.getParameterValues("goodsId");
-			String newNums[] = request.getParameterValues("newNums");
-			
-			//test whether get the new value
-			for (int i = 0; i < goodsId.length; i++) {
-
-				System.out
-						.println("id===" + goodsId[i] + "  num=" + newNums[i]);
-
-				System.out.println("id===" + goodsId[i] + "  ÊýÁ¿=" + newNums[i]);
-				//modify the goods
+			String goodsId[]=request.getParameterValues("goodsId");
+			String newNums[]=request.getParameterValues("newNums");
+		
+			for(int i=0;i<goodsId.length;i++){
+				System.out.println("id==="+goodsId[i]+"  num="+newNums[i]);
 				mbo.upGoods(goodsId[i], newNums[i]);
 			}
 		}
