@@ -13,14 +13,6 @@ import java.util.*;
 
 public class MyCartBO {
 	
-	public HashMap<String, String> getHm() {
-		return hm;
-	}
-
-	public void setHm(HashMap<String, String> hm) {
-		this.hm = hm;
-	}
-
 	private HashMap<String, String> hm = new HashMap<String, String>();
 
 	private ResultSet rs = null;
@@ -63,6 +55,14 @@ public class MyCartBO {
 	public void upGoods(String goodsId, String newNum) {
 
 		hm.put(goodsId, newNum);
+	}
+
+	public HashMap<String, String> getHm() {
+		return hm;
+	}
+
+	public void setHm(HashMap<String, String> hm) {
+		this.hm = hm;
 	}
 
 	public ArrayList showMyCart() {

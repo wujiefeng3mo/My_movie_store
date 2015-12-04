@@ -44,10 +44,10 @@ public class LoginCl extends HttpServlet {
 				} else {
 					MyCartBO mcb = (MyCartBO) request.getSession()
 							.getAttribute("mycart");
-					//ArrayList al = mcb.showMyCart();
-					//request.setAttribute("mycartInfo", al);
-					//request.getRequestDispatcher("shopping3.jsp").forward(
-							//request, response);
+					ArrayList al = mcb.showMyCart();
+					request.setAttribute("mycartInfo", al);
+					request.getRequestDispatcher("shopping3.jsp").forward(
+							request, response);
 				}
 			} else {
 				// user is illegal

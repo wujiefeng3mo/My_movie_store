@@ -1,49 +1,75 @@
 
 -------user form
-create table users (
-userid bigint not null primary key, --- id
-username varchar(30) not null, --- username
-truename varchar(30) not null, ----- true name
-password varchar(30) not null, ------- password
-email varchar(40) not null, -------- email address
-phone varchar(20) not null, --------phone number
-address varchar(30) not null,
-postcode char(6) not null, ----- postcode
-grade int   default 1 -----------user level
+CREATE TABLE users
+(
+  userid bigint NOT NULL,
+  username character varying(30) NOT NULL,
+  truename character varying(30) NOT NULL,
+  password character varying(30) NOT NULL,
+  email character varying(40) NOT NULL,
+  phone character varying(20) NOT NULL,
+  address character varying(30) NOT NULL,
+  postcode character(6) NOT NULL,
+  grade integer DEFAULT 1,
+  CONSTRAINT users_pkey PRIMARY KEY (userid)
+)
+WITH (
+  OIDS=FALSE
 );
-
 
 -------administration form
 
 
 
 --------products form
-create table products (
-productsId bigint null primary key,
-productName varchar(40),
-productIntro varchar(500),
-productPrice float,
-productNum int,
-publisher varchar(40),
-photo varchar(40),
-productType varchar(10)
+CREATE TABLE products
+(
+  productsid bigint NOT NULL,
+  productname character varying(40),
+  productintro character varying(500),
+  productprice double precision,
+  productnum integer,
+  publisher character varying(40),
+  photo character varying(40),
+  producttype character varying(10),
+  CONSTRAINT products_pkey PRIMARY KEY (productsid)
+)
+WITH (
+  OIDS=FALSE
 );
 
 --------------order form
-create table orders(
-ordersId bigint not null primary key,
-userId bigint references users(userid),
-orderDate date default current_date,
-payMode varchar(20),
-isPayed boolean,
-totalPrice float not null
+CREATE TABLE orders
+(
+  ordersid serial NOT NULL,
+  userid bigint,
+  orderdate date DEFAULT ('now'::text)::date,
+  paymode character varying(20),
+  ispayed boolean,
+  totalprice double precision NOT NULL,
+  CONSTRAINT orders_pkey PRIMARY KEY (ordersid),
+  CONSTRAINT orders_userid_fkey FOREIGN KEY (userid)
+      REFERENCES users (userid) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
 );
-
 ----------------order detail form
-create table orderDetail(
-	ordersIid bigint  references orders(ordersId),
-	productsId bigint references products(productsId),
-	quant integer not null
+CREATE TABLE orderdetail
+(
+  ordersiid bigint,
+  productsid bigint,
+  quant integer NOT NULL,
+  CONSTRAINT orderdetail_ordersiid_fkey FOREIGN KEY (ordersiid)
+      REFERENCES orders (ordersid) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT orderdetail_productsid_fkey FOREIGN KEY (productsid)
+      REFERENCES products (productsid) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
 );
 --------insert a  user
 insert into users values (0,'admin','admin','admin','wujiefeng3mo@gmail.com','111-111-1111','NJ','07307');

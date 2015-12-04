@@ -70,11 +70,14 @@ public class ShoppingClServlet extends HttpServlet
 		}
 		else if (type.equals("show")) 
 		{
-			if (ub == null && mbo.getHm().isEmpty()) 
+			if (ub == null) 
 			{
 				request.getRequestDispatcher("shopping2.jsp").forward(request,
 						response);
-				return;
+			}
+			else if(mbo.getHm().isEmpty()) {
+				request.getRequestDispatcher("EmptyCart.jsp").forward(request,
+						response);
 			}
 		}
 		else if (type.equals("delAll")) 
