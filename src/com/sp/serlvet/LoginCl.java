@@ -27,7 +27,6 @@ public class LoginCl extends HttpServlet {
 			UserBeanBO ubb = new UserBeanBO();
 			if (ubb.checkUser(u, p)) {
 				UserBean ub = ubb.getUserBean(u);
-				// the user is legal
 				/*
 				 * 1.put the user that have already successfully logined into
 				 * session

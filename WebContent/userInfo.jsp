@@ -1,5 +1,4 @@
-<%@ page language="java" import="com.sp.model.*" text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="com.sp.model.*" pageEncoding="utf-8"%>
     
 <%
 String path = request.getContextPath();
