@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</tr>
 										<tr>
 											<td align="right">Password:</td>
-											<td align="left"><input name="password" type="text"
+											<td align="left"><input name="password" type="password"
 												size="15" /></td>
 										</tr>
 										<tr>
